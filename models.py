@@ -16,7 +16,8 @@
 
 
 def verification_user(user : dict) -> bool :
-    """Принимает юзера. Отдаёт true если найден id. Иначе записывает id"""
+    """ Авторизация пользователя
+    Принимает юзера. Отдаёт true если найден id, иначе записывает id"""
     with open("User.txt", "r+") as file:
         us_id = str(user.id)
         if not us_id + "\n" in file.readlines():
